@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.ck.myeventbus.core.Hermes;
+
 
 /**
  * 相当于阿里巴巴
@@ -18,8 +20,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        EventBus.getDefault().register(this);
+//        EventBus.getDefault().register(this);
         text= (TextView) findViewById(R.id.text_content);
+
+        Hermes.getDefault().init(this);
+        Hermes.getDefault().register(UserManager.class);
     }
 
     public void change(View view) {

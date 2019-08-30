@@ -8,7 +8,20 @@ import android.os.Parcelable;
  */
 
 public class Responce implements Parcelable {
+
+    //相应的对象
+    private String data;
+
+    public String getData() {
+        return data;
+    }
+
     protected Responce(Parcel in) {
+        data = in.readString();
+    }
+
+    public Responce(String data) {
+        this.data = data;
     }
 
     public static final Creator<Responce> CREATOR = new Creator<Responce>() {
@@ -30,5 +43,6 @@ public class Responce implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(data);
     }
 }

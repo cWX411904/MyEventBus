@@ -5,9 +5,17 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="发送消息"
+        android:text="得到IUserManager对象"
         android:gravity="center"
-        android:onClick="send"
+        android:onClick="userManager"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="得到getUser消息"
+        android:gravity="center"
+        android:onClick="send2"
         />
 
 </LinearLayout>

@@ -26,6 +26,12 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
+//    implementation 'com.alibaba:fastjson:1.2.46'
+
+    //因为fastJson不支持Object，改用Gson
+    implementation 'com.google.code.gson:gson:2.5'
+
+
     //用自己手写的EventBus，不用官方的
 //    compile 'de.greenrobot:eventbus:3.0.0-beta1'
 }
